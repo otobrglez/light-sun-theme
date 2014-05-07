@@ -1,0 +1,28 @@
+---
+title: Example post
+---
+
+.post
+  .post-wrap
+    .post-header
+      .post-image
+        %img{src: "img/b_small-#{rand(3)}.jpg"}
+      //.post-image
+
+      .post-header-wrap
+        .title
+          %h1
+            -#%a{href:""}
+            =link_to lorem.sentence, "/post.html", relative: true
+        //.title
+
+        .details
+          %span.date=lorem.date
+          \/
+          %a.category{href:"/"}=lorem.word
+        //.details
+      //.post-header-wrap
+
+    .post-content
+      =lorem.paragraphs(10).split("\n").join("</br>")
+    //.post-content

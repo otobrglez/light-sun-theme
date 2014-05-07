@@ -1,0 +1,27 @@
+---
+title: Gardening is what I do.
+---
+
+- 10.times do
+  .post.home
+    .post-wrap
+      .post-header
+        .post-image
+          %img{src: "img/b_small-#{rand(3)}.jpg"}
+        //.post-image
+
+        .post-header-wrap
+          .title
+            %h1
+              =link_to lorem.sentence, "/post.html", relative: true
+          //.title
+
+          .details
+            %span.date= lorem.date
+            \/
+            %a.category{href:"/"}=lorem.word
+          //.details
+        //.post-header-wrap
+      //.post-header
+    //.post-wrap
+  //.post

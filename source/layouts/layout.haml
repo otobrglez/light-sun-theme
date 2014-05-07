@@ -1,0 +1,49 @@
+!!!
+%html
+  %head
+    %title=current_page.data.title || "Wot"
+    %link{rel:"stylesheet", href:"css/main.css"}/
+
+  %body
+    %header.header
+      .inner-wrap
+        .who
+          .who-wrap
+            %a{href:"/"}
+              .face-wrap
+                %img.face{src: "img/face2.jpg"}
+              .name
+                John Smith
+          //.who-wrap
+
+          %nav.nav
+            %a{href:"/"} Home
+            %a{href:"/"} Life
+            %a{href:"/"} Sport
+            %a{href:"/"} Something else
+          //.nav
+
+        //.who
+      //.inner-wrap
+    //.header
+
+    .main
+      .inner-wrap
+        =yield
+      //.inner-wrap
+    //.main
+
+    %footer.footer
+      .inner-wrap
+        %p.mission
+          John Smith - Gardening is what I do. Call /
+          %a{href:"/"} mail
+          me!
+
+        %ul.social
+          %li
+            %a{href:"/"} John Smith @ Instagram
+          %li
+            %a{href:"/"} Facebook Page
+        //.social
+    //.footer

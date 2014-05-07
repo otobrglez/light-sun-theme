@@ -1,0 +1,141 @@
+/* By Oto Brglez */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
+
+$color_first: #8EC858
+$color_second: #FFF
+$color_third: #666
+$size_font: 14px
+$size_font_small: 12px
+$size_header: 20px
+$box_size: 50px
+
+html, body, h1, h2, h3
+  margin: 0px
+  padding: 0px
+
+a
+  color: $color_third
+
+body
+  padding: 10px
+  line-height: $size_font*1.2
+
+html, body, input, select
+  font-family: helvetica
+  font-size: $size_font
+
+h1, h2, h3, .header
+  font-family: 'Lato', serif
+  font-weight: 400
+
+.header, .main, .footer
+  .inner-wrap
+    display: block
+    max-width: 600px
+    margin: 0px auto
+
+/* header */
+.header
+  .who
+    position: relative
+    display: block
+    height: $box_size
+    line-height: $box_size
+
+    .who-wrap, .nav
+      float: left
+      display: inline-block
+      height: $box_size
+      line-height: $box_size
+
+    .who-wrap
+      a
+        height: $box_size
+        line-height: $box_size
+        display: block
+        background-color: $color_first
+        color: $color_second
+
+        .face-wrap, .name
+          display: inline-block
+          float: left
+          height: $box_size
+          line-height: $box_size
+
+          &.name
+            padding-left: 10px
+            padding-right: 10px
+
+          img
+            height: $box_size
+    .nav
+      position: relative
+      a
+        color: $color_first
+        padding-left: 20px
+        text-decoration: none
+
+
+
+/* footer */
+.footer
+  display: block
+  margin-top: 30px
+  margin-bottom: 10px
+  padding-top: 0px
+  border-top: 2px solid $color_first
+  color: $color_third
+  a
+    color: $color_third
+
+  p.mission
+    display: block
+    padding-bottom: 10px
+
+  ul.social
+    list-style: none
+    margin: 0px
+    padding: 0px
+    li
+      margin: 0px
+      padding: 0px
+      font-size: $size_font_small
+
+
+/* main */
+.main
+  .post.home
+    /* Just home page */
+
+  .post
+    margin-top: 20px
+    margin-bottom: 20px
+    .post-wrap
+      .post-header
+        display: block
+        position: relative
+        min-height: $box-size
+        h1
+          font-size: $size_header
+          a
+            text-decoration: none
+            color: black
+
+        .post-image
+          position: absolute
+          left: 0px
+          top: 0px
+          img
+            height: $box_size
+
+        .title h1
+          padding-bottom: 5px
+        .details
+          color: $color_third
+          font-size: $size_font_small
+
+        .post-header-wrap
+          padding-left: $box_size+10px
+      .post-content
+        display: block
+        margin-top: 10px
